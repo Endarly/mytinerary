@@ -3,8 +3,8 @@
 }
 
 .app {
-  margin-top: 20px; /* Ajusta el valor según el espacio deseado en la parte superior */
-  margin-bottom: 20px; /* Ajusta el valor según el espacio deseado en la parte inferior */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .App-logo {

@@ -26,7 +26,7 @@ export default function Carousel() {
           clickable: true,
         }}
         navigation={true}
-        loop={true} // Habilitamos el bucle infinito
+        loop={true}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
