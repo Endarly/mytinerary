@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.app {
+  margin-top: 20px; /* Ajusta el valor según el espacio deseado en la parte superior */
+  margin-bottom: 20px; /* Ajusta el valor según el espacio deseado en la parte inferior */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
