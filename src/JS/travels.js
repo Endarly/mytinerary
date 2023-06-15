@@ -105,7 +105,7 @@
         "continent": "Sur",
         "country": "Río Negro",
         "city": "Bariloche",
-        "touristSite": "Aeroparque Jorge Newbery",
+        "touristSite": "Gran Cañón",
         "topAttractions": "Aeropuerto Internacional Teniente Luis Candelaria",
     },
     {
@@ -114,7 +114,7 @@
         "continent": "Sur",
         "country": "Río Negro",
         "city": "Bariloche",
-        "touristSite": "Aeroparque Jorge Newbery",
+        "touristSite": "Ciudad Prohibida",
         "topAttractions": "Aeropuerto Internacional Teniente Luis Candelaria",
     },
     {
