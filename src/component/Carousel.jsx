@@ -38,46 +38,61 @@ export default function Carousel() {
 
       for (let j = 0; j < imagesPerSlide; j++) {
         let imagePath;
+        let imageTitle;
 
         if (i === 0) {
           if (j === 0) {
             imagePath = muralla;
+            imageTitle = 'Chinese wall';
           } else if (j === 1) {
             imagePath = torreEiffel;
+            imageTitle = 'Eiffel Tower';
           } else if (j === 2) {
             imagePath = machuPichu;
+            imageTitle = 'Machu Picchu';
           } else {
             imagePath = estatuaLibertad;
+            imageTitle = 'Statue of Liberty';
           }
         } else if (i === 1) {
           if (j === 0) {
             imagePath = grecia;
+            imageTitle = 'Greece';
           } else if (j === 1) {
             imagePath = coliseo;
+            imageTitle = 'Colosseum';
           } else if (j === 2) {
             imagePath = cataratas;
+            imageTitle = ' Iguazu Falls';
           } else {
             imagePath = monteEverest;
+            imageTitle = 'Mount Everest';
           }
         } else if (i === 2) {
           if (j === 0) {
             imagePath = tajMahal;
+            imageTitle = 'Taj Mahal';
           } else if (j === 1) {
             imagePath = bariloche;
+            imageTitle = 'Bariloche';
           } else if (j === 2) {
             imagePath = granCanon;
+            imageTitle = 'Grand Canyon';
           } else {
             imagePath = pekin;
+            imageTitle = 'Beijing';
           }
         }
 
         slideImages.push(
-          <img
-            key={`image-${i}-${j}`}
-            className="imageCarousel"
-            src={imagePath}
-            alt=""
-          />
+          <div key={`image-${i}-${j}`} className="imageContainer">
+            <img
+              className="imageCarousel"
+              src={imagePath}
+              alt=""
+            />
+            <div className="imageTitle">{imageTitle}</div>
+          </div>
         );
       }
 
