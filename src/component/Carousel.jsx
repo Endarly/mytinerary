@@ -108,7 +108,12 @@ export default function Carousel() {
 
   return (
     <div className="containerglobal">
-      <h2>POPULAR MYTINERARIES</h2>
+      <div className="flight-info-search">
+        <h1>Popular MyTineraries</h1>
+        <div id="globe">
+          <div id="plane"></div>
+        </div>
+      </div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
