@@ -7,6 +7,7 @@
 .css-6hp17o-MuiList-root-MuiMenu-list {
     background-image: linear-gradient(to right, #41567b, #272829);
     color: #ffffff;
+    padding: 0px !important;
 }
 
 .css-1uzrjc8-MuiSvgIcon-root{
