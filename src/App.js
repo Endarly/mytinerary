@@ -1,5 +1,5 @@
 import Navbar from './component/Navbar';
-import Home from './component/Carousel';
+import Home from './component/Home';
 import Cities from './component/Cities';
 import Footer from './component/Footer';
 

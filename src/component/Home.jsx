@@ -1,11 +1,14 @@
 import { Link as LinkRouter } from "react-router-dom";
 import Carousel from "./Carousel";
+import CallToAction from "./CallToAction";
+import '../style/callToAction.css';
 
 function Home() {
     return (
         <>
-            <button>
+            <button className="button-container">
                 <LinkRouter to={'/Cities'}> Cities
+                <CallToAction />
                 </LinkRouter>
             </button>
             <Carousel />
