@@ -7,16 +7,41 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+// import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+// import LoginIcon from '@mui/icons-material/Login';
+import LocalAirportIcon from '@mui/icons-material/LocalAirport';
+import PersonIcon from '@mui/icons-material/Person';
+import { Link as LinkRouter } from "react-router-dom";
 
 import '../style/navbar.css';
 
+const pages = [
+  {
+    id: 1,
+    name: 'Cities',
+    path: '/Cities',
+    icon: <LocationOnIcon />
+  },
 
-const pages = ['Home', 'Cities', 'Sign Up', 'Log In'];
+  // {
+  //   id: 2,
+  //   name: 'Sign Up',
+  //   path: '/SignUp',
+  //   icon: <PersonAddAltIcon/>
+  // },
+
+  // {
+  //   id: 3,
+  //   name: 'Log In',
+  //   path: ' /LogIn',
+  //   icon: <LoginIcon/>
+  // }
+];
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -42,24 +67,26 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            MYTINERARY
-          </Typography>
+          <LinkRouter to={'/Home'}>
+            <LocalAirportIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} color="white" />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'white',
+                textDecoration: 'none',
+              }}
+            >
+              MYTINERARY
+            </Typography>
+          </LinkRouter>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -90,14 +117,22 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {pages.map((page, index) => (
+                <LinkRouter to={page.path}>
+                  <MenuItem
+                    key={index}
+                    onClick={handleCloseNavMenu}
+                    style={{
+                      background: 'linear-gradient(to right, #df4617, #4b6491)',
+                    }}
+                  >
+                    <Typography textAlign="center">{page.icon} {page.name}</Typography>
+                  </MenuItem>
+                </LinkRouter>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <LocalAirportIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} color="white" />
           <Typography
             variant="h5"
             noWrap
@@ -110,28 +145,30 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'white',
               textDecoration: 'none',
             }}
           >
             MYTINERARY
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+            {pages.map((page, index) => (
+              <LinkRouter to={page.path}>
+                <Button
+                  key={index}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page.icon}{page.name}
+                </Button>
+              </LinkRouter>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <PersonIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} style={{ color: 'white', fontSize: '35px' }} />
               </IconButton>
             </Tooltip>
             <Menu

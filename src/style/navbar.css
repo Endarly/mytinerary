@@ -1,11 +1,18 @@
 .css-hip9hq-MuiPaper-root-MuiAppBar-root {
-    background-color: #f5802ce2 !important;
     background-image: linear-gradient(to right, #df4617, #4e74bc, #272829);
     color: #ffffff;
 }
 
 
 .css-6hp17o-MuiList-root-MuiMenu-list {
-    background-image: linear-gradient(to right, #df4617, #4e74bc, #272829);
+    background-image: linear-gradient(to right, #41567b, #272829);
     color: #ffffff;
+}
+
+.css-1uzrjc8-MuiSvgIcon-root{
+    color: white;
+}
+
+.css-1uwgr7b-MuiTypography-root{
+    color: white !important;
 }

@@ -25,7 +25,7 @@
   
   .containerglobal h2 {
     /* font-family: 'Roboto', sans-serif!important;  */
-    font-size: 30px; 
+    font-size: 25px; 
     margin-bottom: 10px;
   }
   
@@ -33,7 +33,7 @@
   .mySwiper {
     width: 100%;
     height: auto;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     margin-bottom: 60px;
   }
   
@@ -50,9 +50,9 @@
     /* object-fit: cover; */
     border-radius: 15px;
     padding: 3px;
-    /* min-height: 370px; */
     max-height: 220px;
     width: 100%;
+    /* box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70); */
   }
   
   .autoplay-progress {
@@ -103,22 +103,10 @@
   }
   
   .imageCarousel {
-    width: 80%; /* Ajusta el valor según tus necesidades */
+    width: 80%; 
     height: auto;
     margin: 5px;
   }
-  
-
-  /* .imageTitle {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 5px;
-  } */
   
   .imageContainer {
     position: relative;
@@ -131,7 +119,7 @@
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
     /* background-color: rgba(0, 0, 0, 0.378); */
