@@ -10,11 +10,15 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import LocationOnIcon from '@mui/icons-material/LocationOn'
+// import LocationOnIcon from '@mui/icons-material/LocationOn'
 // import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 // import LoginIcon from '@mui/icons-material/Login';
-import LocalAirportIcon from '@mui/icons-material/LocalAirport';
-import PersonIcon from '@mui/icons-material/Person';
+// import LocalAirportIcon from '@mui/icons-material/LocalAirport';
+// import PersonIcon from '@mui/icons-material/Person';
+import flaticonImage from '../assests/airplane.png';
+import citiesImage from '../assests/international.png';
+import personImage from '../assests/gender-identity.png';
+
 import { Link as LinkRouter } from "react-router-dom";
 
 import '../style/navbar.css';
@@ -24,7 +28,7 @@ const pages = [
     id: 1,
     name: 'Cities',
     path: '/Cities',
-    icon: <LocationOnIcon />
+    icon: <img src={citiesImage} alt="Flaticon" width="40px" height="40px" />
   },
 
   // {
@@ -68,7 +72,8 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LinkRouter to={'/Home'}>
-            <LocalAirportIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} color="white" />
+            {/* <LocalAirportIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} color="white" /> */}
+            <img src={flaticonImage} alt="Flaticon" width="50px" height="50px" />
             <Typography
               variant="h6"
               noWrap
@@ -132,7 +137,8 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <LocalAirportIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} color="white" />
+          {/* <LocalAirportIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} color="white" /> */}
+          {/* <img src={flaticonImage} alt="Flaticon" width="50px" height="50px" /> */}
           <Typography
             variant="h5"
             noWrap
@@ -168,7 +174,9 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <PersonIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} style={{ color: 'white', fontSize: '35px' }} />
+                {/* <PersonIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} style={{ color: 'white', fontSize: '35px' }} /> */}
+                <img src={personImage} alt="Flaticon" width="40px" height="40px" />
+
               </IconButton>
             </Tooltip>
             <Menu

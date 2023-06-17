@@ -10,8 +10,7 @@ function CallToAction() {
   return (
     // <div className="cta-container" style={{ backgroundImage: `url(${backgroundImage})` }}> por si le queremos agregar una imagen 
     <div>
-      <h1 className="cta-heading">Welcome to our Travel Agency</h1>
-      <p>Explore the most fascinating destinations in the world!</p>
+      <h1 className="cta-heading">Find your perfect trip, designed by insiders who and love their cities!</h1>
 
       <button className="cta-button" onClick={handleButtonClick}>
         Book now

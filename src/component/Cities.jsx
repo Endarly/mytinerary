@@ -1,13 +1,15 @@
-import underConstructionImage from '../assests/contruccion.jpg';
+import React from 'react';
+import underConstructionImage from '../assests/jackhanmer-construction-worker.gif';
+import '../style/cities.css';
 
 function Cities() {
   return (
-    <div>
-      <h1>CITIES IS UNDER CONSTRUCTION</h1>
+    <div className='containerCities'>
+      <h3>CITIES IS UNDER CONSTRUCTION</h3>
       <img
         src={underConstructionImage}
         alt="Under Construction"
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '40%', height: '90%' }}
       />
     </div>
   );
