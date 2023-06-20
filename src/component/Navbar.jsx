@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 // import LoginIcon from '@mui/icons-material/Login';
 // import LocalAirportIcon from '@mui/icons-material/LocalAirport';
 // import PersonIcon from '@mui/icons-material/Person';
-import flaticonImage from '../assests/airplane.png';
+import flaticonImage from '../assests/MT.png';
 import citiesImage from '../assests/international.png';
 import personImage from '../assests/gender-identity.png';
 
