@@ -7,7 +7,7 @@ function Home() {
     return (
         <>
             <button className="button-container">
-                <LinkRouter to={'/Cities'}> Cities
+                <LinkRouter to={'/Cities'}>
                 <CallToAction />
                 </LinkRouter>
             </button>
@@ -15,4 +15,4 @@ function Home() {
         </>
     )
 }
-export default Home;
+export default Home; 
