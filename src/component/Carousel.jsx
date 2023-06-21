@@ -109,7 +109,7 @@ export default function Carousel() {
   return (
     <div className="containerglobal">
       <div className="flight-info-search">
-        <h1>Popular MyTineraries</h1>
+        <h2>Popular MyTineraries</h2>
         <div id="globe">
           <div id="plane"></div>
         </div>
