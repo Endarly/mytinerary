@@ -14,7 +14,7 @@ function CallToAction() {
     <div>
       <h1 className="cta-heading">Find your perfect trip, designed by insiders who and love their cities!</h1>
       <button className="cta-button" onClick={handleButtonClick}>
-      Click and find it <FontAwesomeIcon icon={faMapLocationDot} bounce />
+      <p className='CallToActionButton'>Click and find it</p><FontAwesomeIcon icon={faMapLocationDot} bounce/>
       </button>
     </div>
     </div>
