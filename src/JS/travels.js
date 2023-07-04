@@ -1,5 +1,13 @@
 "travels" = [
     {
+        "name": "Machu Picchu",
+        "country": "Perú",
+        "description": "Machu Picchu",
+        "continent": "América",
+        "topAttractions": "Templo del Sol, Intihuatana, Camino Inca",
+        "image": "https://firebasestorage.googleapis.com/v0/b/viajerisimo-arg.appspot.com/o/mytinerary%2FMachu_Picchu%2C_Peru.jpg?alt=media&token=affb9194-14cc-4f3c-a71d-1f624fe56573&_gl=1*3caw6j*_ga*MjE0Mzg4Mjg5NC4xNjg1NDA5ODEx*_ga_CW55HF8NVT*MTY4NjUxNTU2Mi4xNi4xLjE2ODY1MTgxNDcuMC4wLjA."
+    },
+    {
         "id": 1,
         "image": "https://firebasestorage.googleapis.com/v0/b/viajerisimo-arg.appspot.com/o/mytinerary%2FMURALLA-WEB.jpg?alt=media&token=d74f37e8-8109-4a9c-bb3e-2404a63c8136&_gl=1*1ka1nxe*_ga*MjE0Mzg4Mjg5NC4xNjg1NDA5ODEx*_ga_CW55HF8NVT*MTY4NjUxNTU2Mi4xNi4xLjE2ODY1MTY5OTguMC4wLjA.",
         "continent": "Asia",
