@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CityCard from './CityCard';
-import { Link as LinkRouter } from "react-router-dom";
+// import { Link as LinkRouter } from "react-router-dom";
 
 function Cities() {
   const [cities, setCities] = useState([]);
@@ -27,11 +27,12 @@ function Cities() {
       {cities && cities.length > 0 ? (
         <ul>
           {cities.map((city, index) => (
-              <LinkRouter key={index} to={'/CityDetails/'+city.id}>
+              // <LinkRouter key={index} to={'/CityDetails/'+city.id}>
             <li >
+              {/* <Search city={city} /> */}
               <CityCard city={city} />
             </li>
-            </LinkRouter>
+            // </LinkRouter>
 
           ))}
         </ul>

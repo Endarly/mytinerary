@@ -49,7 +49,7 @@ function CityCard({ city }) {
                         </IconButton>
                     }
                     title={city.name}
-                    subheader={city.description}
+                    // subheader={city.description}
                 />
                 <CardMedia
                     component="img"
