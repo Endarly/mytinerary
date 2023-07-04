@@ -11,7 +11,7 @@ function CitiesDetails() {
     const { id } = useParams()
 
     async function getCity(id) {
-        let cityDB = await axios.get("http://localhost:5000/api/cities/" + id);
+        let cityDB = await axios.get("https://endarly-api-cities-crud.onrender.com/api/cities/" + id);
         console.log(cityDB);
         setCity(cityDB.data.response);
     }

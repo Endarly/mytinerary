@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CityCard from './CityCard';
+import '../style/cities.css';
 // import { Link as LinkRouter } from "react-router-dom";
 
 function Cities() {
@@ -8,7 +9,7 @@ function Cities() {
 
   async function getData() {
     try {
-      let citiesDB = await axios.get("http://localhost:5000/api/cities");
+      let citiesDB = await axios.get("https://endarly-api-cities-crud.onrender.com/api/cities");
       setCities(citiesDB.data.response);
     } catch (error) {
       console.error("Error fetching cities:", error);
@@ -19,15 +20,15 @@ function Cities() {
     getData();
   }, []);
 
-      // const handleToggle = () => {
-    //     setIsExpanded(!setExpanded)
-    // };
+  // const handleToggle = () => {
+  //     setIsExpanded(!setExpanded)
+  // };
   return (
-    <div>
+    <div className="cityCards-container">
       {cities && cities.length > 0 ? (
         <ul>
           {cities.map((city, index) => (
-              // <LinkRouter key={index} to={'/CityDetails/'+city.id}>
+            // <LinkRouter key={index} to={'/CityDetails/'+city.id}>
             <li >
               {/* <Search city={city} /> */}
               <CityCard city={city} />
