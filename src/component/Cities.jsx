@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CityCard from './CityCard';
-import Search from './search';
+import Search from './Search';
 import '../style/cities.css';
 // import { Link as LinkRouter } from "react-router-dom";
 
