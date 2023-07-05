@@ -13,23 +13,12 @@
 }
 
 .cityCards-container {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
   width: 80%;
   max-width: 1200px;
 }
-
-/* .css-o69gx8-MuiCardMedia-root{
-    display: block;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-background-position: center;
-    background-position: center;
-    width: 100%;
-    object-fit: contain;
-} */
