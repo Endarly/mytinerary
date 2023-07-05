@@ -36,7 +36,7 @@ function CityCard({ city }) {
 
     return (
         <div className="city-card">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 300 }}>
                 <CardHeader
                     avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -53,7 +53,7 @@ function CityCard({ city }) {
                 />
                 <CardMedia
                     component="img"
-                    height="194"
+                    height="180"
                     image={city.image}
                     alt="City Image"
                 />
