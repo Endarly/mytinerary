@@ -81,7 +81,7 @@ function Navbar() {
               href="/"
               sx={{
                 mr: 2,
-                display: { xs: 'none', md: 'flex' },
+                display: { xs: 'none', md: 'inline' },
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
@@ -157,7 +157,7 @@ function Navbar() {
           >
             MYTINERARY
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'inline' } }}>
             {pages.map((page, index) => (
               <LinkRouter to={page.path}>
                 <Button
