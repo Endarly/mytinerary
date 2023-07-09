@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMapLocationDot} from '@fortawesome/free-solid-svg-icons';
 import '../style/callToAction.css';
-// import backgroundImage from '../assests/playa.jpg';
 
 function CallToAction() {
   const handleButtonClick = () => {
