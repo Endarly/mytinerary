@@ -14,7 +14,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import '../style/cities.css'
+import { Link } from 'react-router-dom';
+import '../style/cities.css';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -49,7 +50,6 @@ function CityCard({ city }) {
                         </IconButton>
                     }
                     title={city.name}
-                    // subheader={city.description}
                 />
                 <CardMedia
                     component="img"
@@ -83,6 +83,7 @@ function CityCard({ city }) {
                     >
                         <ExpandMoreIcon />
                     </ExpandMore>
+                    <Link to={`/CityDetails/${city._id}`} className="details-link">show more</Link>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>

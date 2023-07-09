@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CityCard from './CityCard';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -33,7 +33,6 @@ function Cities() {
     setSearch(searchTerm);
     filtrar(searchTerm);
   };
-  
   const filtrar = (termoBusca) => {
     const searchResults = cities.filter((elemento) => {
       const cityName = elemento.name?.toLowerCase() || '';
@@ -52,17 +51,15 @@ function Cities() {
         </button>
       </div>
 
-      <div>
+      <div className="cityCards-container">
         {isLoading ? (
           <ClipLoader color="rgba(255, 68, 0, 0.418)" loading={isLoading} size={30} css={{ display: "block", margin: "0 auto" }} />
         ) : filteredCities.length > 0 ? (
-          <div className="cityCards-container">
-            {filteredCities.map((city, index) => (
-              <div key={index}>
-                <CityCard city={city} />
-              </div>
-            ))}
-          </div>
+          filteredCities.map((city, index) => (
+            <div key={index}>
+              <CityCard city={city} />
+            </div>
+          ))
         ) : (
           <h4>No cities found</h4>
         )}

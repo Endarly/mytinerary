@@ -4,31 +4,29 @@ import underConstructionImage from '../assests/jackhanmer-construction-worker.gi
 import '../style/cities.css';
 import { useParams } from 'react-router-dom';
 
-function CitiesDetails() {
-    // const [setExpanded, setIsExpanded] = useState(false);
-    const [city, setCity] = useState([])
 
-    const { id } = useParams()
+function CityDetails() {
+    const { id } = useParams();
+    const [city, setCity] = useState(null);
 
     async function getCity(id) {
-        let cityDB = await axios.get("https://endarly-api-cities-crud.onrender.com/api/cities/" + id);
-        console.log(cityDB);
-        setCity(cityDB.data.response);
+        try {
+            const response = await axios.get(`https://endarly-api-cities-crud.onrender.com/api/cities/${id}`);
+            setCity(response.data);
+        } catch (error) {
+            console.error("Error fetching city:", error);
+        }
     }
 
     useEffect(() => {
         getCity(id);
     }, [id]);
 
-    // const handleToggle = () => {
-    //     setIsExpanded(!setExpanded)
-    // };
-
     return (
         <div>
-            {city.length > 0 ? (
+            {city ? (
                 <div className='containerCities'>
-                    <h1>CITIES IS UNDER CONSTRUCTION
+                    <h1>CITIES IS UNDER CONSTRUCTION</h1>
                     <h3>CITY NAME: {city.name}</h3>
                     <p>Country: {city.country}</p>
                     <p>Description: {city.description}</p>
@@ -40,7 +38,6 @@ function CitiesDetails() {
                         alt="Under Construction"
                         style={{ width: '40%', height: '90%' }}
                     />
-                    </h1>
                 </div>
             ) : (
                 <h1>Loading</h1>
@@ -49,4 +46,4 @@ function CitiesDetails() {
     );
 }
 
-export default CitiesDetails;
+export default CityDetails;
