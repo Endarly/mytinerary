@@ -83,7 +83,9 @@ function CityCard({ city }) {
                     >
                         <ExpandMoreIcon />
                     </ExpandMore>
-                    <Link to={`/CityDetails/${city._id}`} className="details-link">show more</Link>
+                    <Link to={`/CityDetails/${city._id}`} className="details-link">
+                        show more
+                    </Link>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>

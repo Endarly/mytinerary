@@ -127,6 +127,11 @@
     align-items: center;
   }
   
+  .swiper-backface-hidden .swiper-slide {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    background-color: #00000002!important;
+}
 
   /*image*/
    #wrap{
@@ -185,6 +190,3 @@
   @keyframes spin {
     to { transform: rotate(360deg); }
   }
-  
-  
-  

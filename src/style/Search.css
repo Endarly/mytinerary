@@ -1,4 +1,4 @@
-.Search{
+.searchContainer{
     width: 80%;
     margin: 20px auto;
     display: flex;
@@ -7,7 +7,7 @@
    
 }
 
-.Search input{
+.inputSearch{
     width: 300px;
     height: 50px;
     background-color: rgba(255, 68, 0, 0.418);
@@ -18,13 +18,5 @@
     padding-left: 45px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px 0px 0px 5px;
-}
-
-.Search button{
-    border: none;
-    background-color: rgba(255, 68, 0, 0.418);
-    border-radius: 0px 5px 5px 0px;
-    width: 50px;
-
+    border-radius: 5px 5px 5px 5px;
 }
