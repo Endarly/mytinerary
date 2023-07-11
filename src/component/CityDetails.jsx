@@ -32,9 +32,9 @@ function CityDetails() {
                   <h3>{city.name}</h3>
                   <img src={city.avatarCountry} alt={city.country} className='avatar' />
                 </div>
-                <p className="country">Country: {city.country}</p>
-                <p className="continent">Continent: {city.continent}</p>
-                <p className="description">Description: {city.description}</p>
+                <p className="country"> {city.country}</p>
+                <p className="continent"> {city.continent}</p>
+                <p className="description"> {city.description}</p>
                 <div className="itinerary-buttons">
                   <button className="itineraryLink ">Itinerary 1</button>
                   <button className="itineraryLink">Itinerary 2</button>
