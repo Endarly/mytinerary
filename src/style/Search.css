@@ -20,3 +20,23 @@
     -moz-border-radius: 5px;
     border-radius: 5px 5px 5px 5px;
 }
+
+.scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    background-color: #3e71c8;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .scroll-button:hover {
+    background-color: #333;
+  }
+  
