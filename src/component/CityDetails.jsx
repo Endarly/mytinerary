@@ -2,52 +2,62 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../style/cities.css';
 import { useParams } from 'react-router-dom';
-
+import Modal from 'react-modal';
+import ItinerariesModalContent from './ItinerariesModalContent';
 
 function CityDetails() {
-    const { id } = useParams();
-    const [city, setCity] = useState(null);
+  const { id } = useParams();
+  const [city, setCity] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    async function getCity(id) {
-        try {
-            const response = await axios.get(`https://endarly-api-cities-crud.onrender.com/api/cities/${id}`);
-            setCity(response.data.response);
-            console.log(response.data.response)
-        } catch (error) {
-            console.error("Error fetching city:", error);
-        }
+  async function getCity(id) {
+    try {
+      const response = await axios.get(`https://endarly-api-cities-crud.onrender.com/api/cities/${id}`);
+      setCity(response.data.response);
+      console.log(response.data.response);
+    } catch (error) {
+      console.error("Error fetching city:", error);
     }
+  }
 
-    useEffect(() => {
-        getCity(id);
-    }, [id]);
+  useEffect(() => {
+    getCity(id);
+  }, [id]);
 
-    return (
-        <div className='containerCities'>
-          {city ? (
-            <>
-              <img src={city.image} alt={city.name} />
-              <div className='cityDetails'>
-                <div className='name-avatar-wrapper'>
-                  <h3>{city.name}</h3>
-                  <img src={city.avatarCountry} alt={city.country} className='avatar' />
-                </div>
-                <p className="country"> {city.country}</p>
-                <p className="continent"> {city.continent}</p>
-                <p className="description"> {city.description}</p>
-                <div className="itinerary-buttons">
-                  <button className="itineraryLink ">Itinerary 1</button>
-                  <button className="itineraryLink">Itinerary 2</button>
-                  <button className="itineraryLink">Itinerary 3</button>
-                </div>
-              </div>
-            </>
-          ) : (
-            <h1>Loading</h1>
-          )}
-        </div>
-      );
-      
+  return (
+    <div className='containerCities'>
+      {city ? (
+        <>
+          <img src={city.image} alt={city.name} />
+          <div className='cityDetails'>
+            <div className='name-avatar-wrapper'>
+              <h3>{city.name}</h3>
+              <img src={city.avatarCountry} alt={city.country} className='avatar' />
+            </div>
+            <p className="country"> {city.country}</p>
+            <p className="continent"> {city.continent}</p>
+            <p className="description"> {city.description}</p>
+            <div className="itinerary-buttons">
+              {/* Agregar logica si existe mas de un itinerio por city */}
+              <button className="itineraryLink" onClick={() => setModalIsOpen(true)}>
+                Itinerary
+              </button>
+            </div>
+          </div>
+        </>
+      ) : (
+        <h1>....LOADING</h1>
+      )}
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+      >
+        <ItinerariesModalContent onClose={() => setModalIsOpen(false)} cityId={city ? city.id : null} />
+      </Modal>
+
+    </div>
+  );
 }
 
 export default CityDetails;
