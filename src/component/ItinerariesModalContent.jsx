@@ -8,7 +8,7 @@ function ItinerariesModalContent({ onClose, cityId }) {
     async function getItineraries() {
       try {
         const response = await axios.get('https://endarly-api-itineraries-crud.onrender.com/api/itineraries');
-        const filteredItineraries = response.data.response.filter(itinerary => itinerary.cityId === response.data.response[0].cityId);
+        const filteredItineraries = response.data.response.filter(itinerary => itinerary.cityId === cityId);
         setItineraries(filteredItineraries);
       } catch (error) {
         console.error("Error fetching itineraries:", error);
@@ -16,7 +16,7 @@ function ItinerariesModalContent({ onClose, cityId }) {
     }
 
     getItineraries();
-  }, []);
+  }, [cityId]);
 
   return (
     <div>
@@ -31,7 +31,7 @@ function ItinerariesModalContent({ onClose, cityId }) {
               <p>Creator Photo: {itinerary.creatorPhoto}</p>
               <p>Unit Price: {itinerary.unitPrice}</p>
               <p>Duration: {itinerary.duration}</p>
-              <p>Hashtags: {itinerary.hastags}</p>
+              <p>Hashtags: {itinerary.hashtags}</p>
               <p>Likes: {itinerary.likes}</p>
             </li>
           ))}

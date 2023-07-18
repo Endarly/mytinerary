@@ -14,7 +14,7 @@ function CityDetails() {
     try {
       const response = await axios.get(`https://endarly-api-cities-crud.onrender.com/api/cities/${id}`);
       setCity(response.data.response);
-      console.log(response.data.response);
+      // console.log(response.data.response);
     } catch (error) {
       console.error("Error fetching city:", error);
     }
@@ -38,7 +38,6 @@ function CityDetails() {
             <p className="continent"> {city.continent}</p>
             <p className="description"> {city.description}</p>
             <div className="itinerary-buttons">
-              {/* Agregar logica si existe mas de un itinerio por city */}
               <button className="itineraryLink" onClick={() => setModalIsOpen(true)}>
                 Itinerary
               </button>
@@ -53,9 +52,9 @@ function CityDetails() {
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
       >
-        <ItinerariesModalContent onClose={() => setModalIsOpen(false)} cityId={city ? city.id : null} />
+        {/* {console.log("City ID:", city ? city._id : null)} */}
+        <ItinerariesModalContent onClose={() => setModalIsOpen(false)} cityId={city ? city._id : null} />
       </Modal>
-
     </div>
   );
 }
