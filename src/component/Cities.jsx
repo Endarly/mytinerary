@@ -47,7 +47,7 @@ function Cities() {
               return <CityCard key={index} city={city} />;
             })
           ) : (
-            <h1>....LOADING</h1>
+            <h4>....LOADING</h4>
           )}
         </div>
         {showScrollButton && (

@@ -45,7 +45,7 @@ function CityDetails() {
           </div>
         </>
       ) : (
-        <h1>....LOADING</h1>
+        <h4>....LOADING</h4>
       )}
 
       <Modal
