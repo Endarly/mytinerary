@@ -39,19 +39,23 @@ function Cities() {
 
   return (
     <>
-    <div className="mainContainer">
-      <Search cities={cities} />
-      <div className="cityCards-container">
-        
-        {cities && cities.length > 0 ? (
-          searchResult.map((city, index) => {
-            return <CityCard key={index} city={city} />;
-          })
-        ) : (
-          <h1>....LOADING</h1>
+      <div className="mainContainer">
+        <Search cities={cities} />
+        <div className="cityCards-container">
+          {cities && cities.length > 0 ? (
+            searchResult.map((city, index) => {
+              return <CityCard key={index} city={city} />;
+            })
+          ) : (
+            <h1>....LOADING</h1>
+          )}
+        </div>
+        {showScrollButton && (
+          <button className="scroll-button" onClick={scrollToTop}>
+            ↑
+          </button>
         )}
       </div>
-    </div>
     </>
   );
 }
