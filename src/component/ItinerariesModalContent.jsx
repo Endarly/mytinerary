@@ -24,6 +24,7 @@ function calculateBillCount(price) {
 
 function ItinerariesModalContent({ onClose, cityId }) {
   const [itineraries, setItineraries] = useState([]);
+  const [loading, setLoading] = useState(true); // State for loading
 
   useEffect(() => {
     async function getItineraries() {
@@ -31,8 +32,10 @@ function ItinerariesModalContent({ onClose, cityId }) {
         const response = await axios.get('https://endarly-api-itineraries-crud.onrender.com/api/itineraries');
         const filteredItineraries = response.data.response.filter(itinerary => itinerary.cityId === cityId);
         setItineraries(filteredItineraries);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching itineraries:", error);
+        setLoading(false);
       }
     }
 
@@ -42,7 +45,9 @@ function ItinerariesModalContent({ onClose, cityId }) {
   return (
     <div>
       <h2 className="itinerariesHeading">ITINERARIES</h2>
-      {itineraries.length > 0 ? (
+      {loading ? (
+        <h1>....LOADING</h1>
+      ) : itineraries.length > 0 ? (
         <ul className="itinerariesList">
           {itineraries.map((itinerary, index) => (
             <div key={itinerary._id} className="itineraryItem">
