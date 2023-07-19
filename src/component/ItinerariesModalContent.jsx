@@ -1,6 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../style/itineraries.css'
+import '../style/itineraries.css';
+
+function formatDurationToHour(duration) {
+  if (Number.isInteger(duration)) {
+    return `${duration}h`;
+  } else {
+    const hours = Math.floor(duration / 60);
+    const minutes = duration % 60;
+    return `${hours}h ${minutes}m`;
+  }
+}
+
+function calculateBillCount(price) {
+  if (price <= 1) {
+    return 1;
+  } else if (price > 1 && price < 5) {
+    return Math.ceil(price);
+  } else {
+    return 5;
+  }
+}
 
 function ItinerariesModalContent({ onClose, cityId }) {
   const [itineraries, setItineraries] = useState([]);
@@ -20,23 +40,23 @@ function ItinerariesModalContent({ onClose, cityId }) {
   }, [cityId]);
 
   return (
-    <div className='containerItineraries'>
-      <h2>Itineraries</h2>
+    <div>
+      <h2 className="itinerariesHeading">ITINERARIES</h2>
       {itineraries.length > 0 ? (
-        <ul>
-          {itineraries.map((itinerary) => (
-            <li key={itinerary._id}>
-              <p>Name: {itinerary.nameItinerary}</p>
+        <ul className="itinerariesList">
+          {itineraries.map((itinerary, index) => (
+            <div key={itinerary._id} className="itineraryItem">
+              <p className="itineraryName"><strong>Name:</strong> {itinerary.nameItinerary}</p>
               <img className="creatorPhotoImg" src={itinerary.creatorPhoto} alt={itinerary.creatorPhoto} />
-              <p>Creator Name: {itinerary.creatorName}</p>
-              <img src={itinerary.image} alt={itinerary.image} />
-              <p>Creator: {itinerary.creatorName}</p>
-              <p>description: {itinerary.description}</p>
-              <p>Unit Price: {itinerary.unitPrice}</p>
-              <p>Duration: {itinerary.duration}</p>
-              <p>Hashtags: {itinerary.hashtags}</p>
-              <p>Likes: {itinerary.likes}</p>
-            </li>
+              <p>{itinerary.creatorName}</p>
+              <img src={itinerary.image} alt={itinerary.image} className="mainImage" />
+              <p><strong>Description:</strong> {itinerary.description}</p>
+              <p><strong>Unit Price:</strong> {calculateBillCount(itinerary.unitPrice)}</p>
+              <p><strong>Duration:</strong> {Number.isInteger(itinerary.duration) ? formatDurationToHour(itinerary.duration) : formatDurationToHour(itinerary.duration)}</p>
+              <p><strong>Hashtags:</strong> {itinerary.hashtags}</p>
+              <p><strong>Likes:</strong> {itinerary.likes}</p>
+              {index !== itineraries.length - 1 && <div className="divider" />}
+            </div>
           ))}
         </ul>
       ) : (
