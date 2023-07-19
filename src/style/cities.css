@@ -133,3 +133,6 @@
   margin-top: 20px;
 }
 
+.itineraryLink:hover {
+  background-color: #aaa;
+}
