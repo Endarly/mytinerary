@@ -1,0 +1,34 @@
+.containerItineraries img {
+    /* width: 40%; */
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+.closeButton {
+    background-color: #3e71c8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  
+.closeButton:hover {
+    background-color: #aaa;
+  }
+  
+  .creatorPhotoImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
