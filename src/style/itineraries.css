@@ -47,13 +47,39 @@
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 5px;
+    border-radius: 10px!important;
+    box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70)!important;
   }
 
   .itineraryName {
     font-weight: bold;
-  }
+    font-size:x-large;
+    text-align: center;
+    font-family: Lato;
+}
+
 
   .divider {
     border-top: 5px solid #ccc;
     margin: 10px 0;
   }
+
+  .itinararyCreatorName {
+    font-weight: bold;
+    font-size:medium;
+    font-family: Lato;
+  }
+
+  .itinerariesHeading {
+    font-family: Lato;
+    font-size: 64px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .descriptionItineraries {
+    margin-top: 25px!important;
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-family: Lato;
+    font-size: 12px;
+}

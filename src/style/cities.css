@@ -10,6 +10,11 @@
   margin: 10px;
 }
 
+.css-1xez8po-MuiPaper-root-MuiCard-root {
+  border-radius: 10px!important;
+  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70)!important;
+}
+
 .cityCards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -58,6 +63,8 @@
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 5px;
+  border-radius: 10px!important;
+  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70)!important;
 }
 
 
@@ -68,6 +75,7 @@
 
 .containerCities .cityDetails h3 {
   margin-bottom: 10px;
+  font-family: Lato;
 }
 
 .containerCities .cityDetails p {
@@ -102,20 +110,25 @@
   font-size: 36px;
   font-weight: bold;
   margin-right: 10px;
+  font-family: Lato;
 }
 
 .containerCities .cityDetails p.country {
   font-size: 24px;
   font-weight: bold;
+  font-family: Lato;
 }
 
 .containerCities .cityDetails p.continent {
   font-size: 22px;
+  font-family: Lato;
 }
 
 .containerCities .cityDetails p.description {
-  max-width: 500px;
+  max-width: 600px;
   text-align: justify;
+  font-size: medium;
+  font-family: Lato;
 }
 
 .itineraryLink {
@@ -135,4 +148,9 @@
 
 .itineraryLink:hover {
   background-color: #aaa;
+}
+
+.css-r40f8v-MuiTypography-root{
+  color: rgb(0 0 0)!important;
+  font-weight: bold!important;
 }

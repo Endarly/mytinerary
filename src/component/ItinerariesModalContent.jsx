@@ -24,7 +24,7 @@ function calculateBillCount(price) {
 
 function ItinerariesModalContent({ onClose, cityId }) {
   const [itineraries, setItineraries] = useState([]);
-  const [loading, setLoading] = useState(true); // State for loading
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getItineraries() {
@@ -44,18 +44,18 @@ function ItinerariesModalContent({ onClose, cityId }) {
 
   return (
     <div>
-      <h2 className="itinerariesHeading">ITINERARIES</h2>
+      <h2 className="itinerariesHeading">MORE THAN STORIES</h2>
       {loading ? (
         <h1>....LOADING</h1>
       ) : itineraries.length > 0 ? (
         <ul className="itinerariesList">
           {itineraries.map((itinerary, index) => (
             <div key={itinerary._id} className="itineraryItem">
-              <p className="itineraryName"><strong>Name:</strong> {itinerary.nameItinerary}</p>
               <img className="creatorPhotoImg" src={itinerary.creatorPhoto} alt={itinerary.creatorPhoto} />
-              <p>{itinerary.creatorName}</p>
+              <p className="itinararyCreatorName">{itinerary.creatorName}</p>
+              <p className="itineraryName">{itinerary.nameItinerary}</p>
               <img src={itinerary.image} alt={itinerary.image} className="mainImage" />
-              <p><strong>Description:</strong> {itinerary.description}</p>
+              <p className="descriptionItineraries"> {itinerary.description}</p>
               <p><strong>Unit Price:</strong> {calculateBillCount(itinerary.unitPrice)}</p>
               <p><strong>Duration:</strong> {Number.isInteger(itinerary.duration) ? formatDurationToHour(itinerary.duration) : formatDurationToHour(itinerary.duration)}</p>
               <p><strong>Hashtags:</strong> {itinerary.hashtags}</p>
