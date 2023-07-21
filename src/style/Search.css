@@ -42,3 +42,10 @@
     background-color: #333;
   }
   
+
+  .noResultsMessage {
+    bottom: 20px;
+    left: 50%;
+    font-size: 20px;
+  }
+  
