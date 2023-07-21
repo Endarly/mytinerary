@@ -59,13 +59,13 @@ function CityCard({ city }) {
                 />
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
-                        Country: {city.country}
+                        {city.country}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Continent: {city.continent}
+                        {city.continent}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Top Attractions: {city.topAttractions}
+                        {city.topAttractions}
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
