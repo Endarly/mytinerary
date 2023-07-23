@@ -43,8 +43,11 @@ function ItinerariesModalContent({ onClose, cityId }) {
   }, [cityId]);
 
   return (
-    <div>
+    <div className="container">
       <h2 className="itinerariesHeading">MORE THAN STORIES</h2>
+      <div className="imageContainer">
+        <img src="https://firebasestorage.googleapis.com/v0/b/agenciaviajes-44c7b.appspot.com/o/agenciaviajes%2F186961527-sello-postal-del-puente-de-la-torre.webp?alt=media&token=86e3e0c9-f63b-46ea-b922-e442a86a4641" alt="" className="commonImage" />
+      </div>
       {loading ? (
         <h1>....LOADING</h1>
       ) : itineraries.length > 0 ? (
