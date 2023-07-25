@@ -34,7 +34,8 @@ export default function Carousel() {
     const slides = [];
 
     for (let i = 0; i < numSlides; i++) {
-      const slideImages = [];
+      const slideImagesTop = [];
+      const slideImagesBottom = [];
 
       for (let j = 0; j < imagesPerSlide; j++) {
         let imagePath;
@@ -63,7 +64,7 @@ export default function Carousel() {
             imageTitle = 'Colosseum';
           } else if (j === 2) {
             imagePath = cataratas;
-            imageTitle = ' Iguazu Falls';
+            imageTitle = 'Iguazu Falls';
           } else {
             imagePath = monteEverest;
             imageTitle = 'Mount Everest';
@@ -84,21 +85,29 @@ export default function Carousel() {
           }
         }
 
-        slideImages.push(
-          <div key={`image-${i}-${j}`} className="imageContainer">
-            <img
-              className="imageCarousel"
-              src={imagePath}
-              alt=""
-            />
-            <div className="imageTitle">{imageTitle}</div>
-          </div>
-        );
+        if (j < 2) {
+          slideImagesTop.push(
+            <div key={`image-${i}-${j}`} className="imageContainer">
+              <img className="imageCarousel" src={imagePath} alt="" />
+              <div className="imageTitle">{imageTitle}</div>
+            </div>
+          );
+        } else {
+          slideImagesBottom.push(
+            <div key={`image-${i}-${j}`} className="imageContainer">
+              <img className="imageCarousel" src={imagePath} alt="" />
+              <div className="imageTitle">{imageTitle}</div>
+            </div>
+          );
+        }
       }
 
       slides.push(
         <SwiperSlide key={`slide-${i}`}>
-          <div className="containerImages">{slideImages}</div>
+          <div className="containerImages">
+            <div className="imageRow">{slideImagesTop}</div>
+            <div className="imageRow">{slideImagesBottom}</div>
+          </div>
         </SwiperSlide>
       );
     }
