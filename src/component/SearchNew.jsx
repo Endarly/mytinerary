@@ -24,6 +24,8 @@ function Search(props) {
       <i><FontAwesomeIcon icon={faSearch}/></i>
       <input type="text" placeholder="Enter your search" onChange={(e) => { filter(e) }}/>
     </div>
+    {noResults && <div className="noResultsMessage"><p>No cities found</p></div>}
+    </>
   )
 }
 
