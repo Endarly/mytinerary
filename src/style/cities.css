@@ -57,15 +57,17 @@
   outline: none;
 }
 
-.containerCities img {
+.containerCities .imageDetails{
   width: 40%;
   margin: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 5px;
-  border-radius: 10px!important;
-  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70)!important;
-  height: 20%
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px!important;
+  box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.447)!important;
+  height: 20%;
 }
 
 
@@ -87,6 +89,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  padding: 5px;
+  border: #9a99994b solid 1px;
   float: right;
   margin-left: 20px;
   overflow: hidden;
@@ -117,19 +121,19 @@
 .containerCities .cityDetails p.country {
   font-size: 24px;
   font-weight: bold;
-  font-family: Lato;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .containerCities .cityDetails p.continent {
   font-size: 22px;
-  font-family: Lato;
+  font-family: su;
 }
 
 .containerCities .cityDetails p.description {
   max-width: 600px;
   text-align: justify;
   font-size: medium;
-  font-family: Lato;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .itineraryLink {
@@ -145,6 +149,7 @@
   cursor: pointer;
   margin-right: 10px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .itineraryLink:hover {

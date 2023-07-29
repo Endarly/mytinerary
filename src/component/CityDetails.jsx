@@ -28,7 +28,7 @@ function CityDetails() {
     <div className='containerCities'>
       {city ? (
         <>
-          <img src={city.image} alt={city.name} />
+          <img className='imageDetails' src={city.image} alt={city.name} />
           <div className='cityDetails'>
             <div className='name-avatar-wrapper'>
               <h3>{city.name}</h3>
