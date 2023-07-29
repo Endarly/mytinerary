@@ -20,10 +20,10 @@
 }
 
 .cta-heading {
-  font-size: 2,2rem;
+  font-size: 2,4rem;
   color: rgb(255, 255, 255);
   width: 70%;
-  -webkit-text-stroke: 1px rgba(12, 12, 12, 0.86);
+  -webkit-text-stroke: 1px rgba(12, 12, 12, 0.473);
   text-align: center;
   margin: auto;
   font-family: "Roboto","Helvetica","Arial",sans-serif;
